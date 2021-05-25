@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: strava-analysis
+Version: 0.1
+Summary: Basic Analysis of Strava running data
+Home-page: UNKNOWN
+Author: Anna Koretchko
+Author-email: annakoretchko@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

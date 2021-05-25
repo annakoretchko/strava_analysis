@@ -2,7 +2,7 @@
 import strava_analysis.get_data.get_data as get_data
 
 def main():
-    get_data.run()
+    get_data()
     print("here")
 
 
