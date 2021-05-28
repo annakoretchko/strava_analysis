@@ -84,6 +84,10 @@ I have been using Strava since 2014, and for those of you unfamiliar with what S
 a social media for runners, bikers and swimmers alike. A platform where equally obsessed athletes can gather and
 ogle over their exercise data. 
 
+I have been collecting running, swimming, lifting, and social media data surrounding my exercise efforts for the past  7 years, so I figured it was time to start doing some analytics ont he data. And sharing my methods and approach with you!
+
+
+
 This project I will be going through the following:
 
   1. Provide a method to gather your most recent Strava data automatically, using python, via Strava's API
@@ -92,18 +96,24 @@ This project I will be going through the following:
   4. Start exploring my data and asking serious questions, like, can we predict the number of kudos I will receive on my next run by how many pictures I post? 
   5. But seriously, doing some cool Machine Learning, simple stats and other fun math to interpret our data!
 
+
+
+
+
 * If you wanna try on your own but don't have a Strava account, feel free to use the demo-data in the data folder!
 
 * If you wanna sign up for Strava and start collecting your own data, you can sign up [here](https://www.strava.com/register/free). It's **FREE**!
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This project is built using the following: 
 * [Python](https://www.python.org/)
 * [jupyter notebook](https://jupyter.org/)
 * [Strava API](https://developers.strava.com/)
 
 
+
+Also special thanks to Francis Polignano who provided some key [YouTube videos](https://www.youtube.com/watch?v=sgscChKfGyg) and [repos](https://github.com/franchyze923/Code_From_Tutorials/tree/master/Strava_Api) explaining how to work with Strava's API.
 
 <!-- GETTING STARTED -->
 ## Getting Started
