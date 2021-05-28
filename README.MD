@@ -83,10 +83,10 @@
 I have been using Strava since 2014, and for those of you unfamiliar with what Strava is, it's essentially 
 a social media for runners, bikers and swimmers alike. A platform where equally obsessed athletes can gather and
 ogle over their exercise data. 
-
+<br />
 I have been collecting running, swimming, lifting, and social media data surrounding my exercise efforts for the past  7 years, so I figured it was time to start doing some analytics ont he data. And sharing my methods and approach with you!
-
-
+<br />
+<br />
 
 This project I will be going through the following:
 
@@ -95,10 +95,8 @@ This project I will be going through the following:
   3. Clean and join the new and historic data 
   4. Start exploring my data and asking serious questions, like, can we predict the number of kudos I will receive on my next run by how many pictures I post? 
   5. But seriously, doing some cool Machine Learning, simple stats and other fun math to interpret our data!
-
-
-
-
+<br />
+<br />
 
 * If you wanna try on your own but don't have a Strava account, feel free to use the demo-data in the data folder!
 
