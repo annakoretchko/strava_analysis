@@ -28,7 +28,7 @@
 
 <p align="center">
   <a href="https://anna-koretchko.ue.r.appspot.com/garmi">
-    <img src="images_RM/avg_speed_vs_distance.png" alt="Logo" width="800" height="500">
+    <img src="images4ReadME/avg_speed_vs_distance.png" alt="Logo" width="800" height="500">
   </a>
 
   <h3 align="center">Garmin Running Analysis</h3>
