@@ -39,12 +39,12 @@
     <a href="https://connect.garmin.com/"><strong>Strava »</strong></a>
     <br />
     <br />
-    <a href="/dist/garmin_analysis-0.1-py3-none-any.whl">Latest Package</a>
+    <a href="https://github.com/annakoretchko/strava_analysis/tree/master/dist/lastest_build">Latest Package</a>
     ·
     <a href="https://anna-koretchko.ue.r.appspot.com">Demo</a>
-    .
+    ·
     <a href="https://developers.strava.com/">Strava API Documentation</a>
-
+    ·
   </p>
 </p>
 
@@ -78,20 +78,30 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-<img src="images/Garmin-logo2.jpeg" alt="Logo"> 
+<img src="images4ReadME/strava_logo.png" alt="Logo"> 
 </p>
-I am an avid running and love using my Garmin Forerunner 945 to collect all the data available while I run. Over the past 8 years, I have accumulated quite a large amount of data. I created this python package for anyone to analyse their Garmin Data from the Garmin Connect site and gain deeper understanding about their running analytics!
+I have been using Strava since 2014, and for those of you unfamiliar with what Strava is, it's essentially 
+a social media for runners, bikers and swimmers alike. A platform where equally obsessed athletes can gather and
+ogle over their exercise data. 
 
+This project I will be going through the following:
 
-* If you wanna try on your own but don't have a Garmin account, feel free to use the data in the demo-data folder!
+  1. Provide a method to gather your most recent Strava data automatically, using python, via Strava's API
+  2. Gather your historic Strava data through their site
+  3. Clean and join the new and historic data 
+  4. Start exploring my data and asking serious questions, like, can we predict the number of kudos I will receive on my next run by how many pictures I post? 
+  5. But seriously, doing some cool Machine Learning, simple stats and other fun math to interpret our data!
 
+* If you wanna try on your own but don't have a Strava account, feel free to use the demo-data in the data folder!
 
+* If you wanna sign up for Strava and start collecting your own data, you can sign up [here](https://www.strava.com/register/free). It's **FREE**!
 
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python](https://www.python.org/)
-
+* [jupyter notebook](https://jupyter.org/)
+* [Strava API](https://developers.strava.com/)
 
 
 
