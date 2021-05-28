@@ -104,7 +104,7 @@ This project I will be going through the following:
 * If you wanna sign up for Strava and start collecting your own data, you can sign up [here](https://www.strava.com/register/free). It's **FREE**!
 
 
-<br />
+
 ### Built With
 
 This project is built using the following: 
