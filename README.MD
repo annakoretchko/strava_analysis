@@ -64,7 +64,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation-and-example-run">Installation</a></li>
+        <li><a href="#installation-and-example-run">Installation and Example Run</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -143,28 +143,35 @@ If all of these words are foreign to you, that is ok. Thankfully, Francis Polign
 
 Once you have the necessary keys discussed above, you're ready to cooking!  
 
-1. Create conda environment for garmin_analyis project ([install conda Here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html))
+1. Create conda environment for strava_analysis project ([install conda Here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html))
 
-2. Download the latest wheel (whl) from from the dist folder [here] (/dist/garmin_analysis-0.1-py3-none-any.whl)
+2. Download the latest wheel (whl) from from the dist folder [here](https://github.com/annakoretchko/strava_analysis/tree/master/dist/lastest_build)
 
 3. cd to the downloaded wheel file
    ```sh
-   (garmin_env) cd Downloads/garmin_analysis-0.X-py3-none-any.whl
+   (strava_env) cd Downloads/strava_analysis-0.X-py3-none-any.whl
    ```
-4. pip install `garmin_analysis-0.X-py3-none-any.whl` to your newly created conda environment
+4. pip install `strava_analysis-0.X-py3-none-any.whl` to your newly created conda environment
    ```sh
-   (garmin_env) pip install garmin_analysis-0.X-py3-none-any.whl
+   (strava_env) pip install garmin_analysis-0.X-py3-none-any.whl
    ```
 5. Now run the package which requires two inputs: -data and -output_path 
     ```sh
-    (garmin_env) python -m garmin_analysis -data "<path to data file from Garmin Connect" -output_path "<path to where you want the output files to be saved"
+    (strava_env) python -m strava_analysis 
     ```
+
+That'll complete getting your historic data, using the API to get the newest data, cleaning and combining them, and creating basic graphs and analysis for it.  
+
+To further explore my data, I turn to jupyter notebooks as they provide an simpler way to have a walkthrough with graphs and images.  
+
+Please refer to [jupyter_visuals](https://github.com/annakoretchko/strava_analysis/tree/master/strava_analysis/jupyter_visuals) and simply replace the output from the previous steps as the csv used here to explore your data!  
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This packages allows Garmin Connect users to analyze their data in a pythonic manner, which can be extrapolated further into a myriad of projects! 
-_To see a live demo of the graphs/outputs, please refer to the [Demo](https://anna-koretchko.ue.r.appspot.com/garmin)_
+This packages allows Strava users to analyze their data in a pythonic manner, which can be extrapolated further into a myriad of projects! It employs Strava's API to access your data and this allows you to run is systematically as you keep on running and gathering more data!  
+
+_To see a live demo of the graphs/outputs, please refer to the [Demo](https://anna-koretchko.ue.r.appspot.com)_
 
 
 
