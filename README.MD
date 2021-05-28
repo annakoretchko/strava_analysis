@@ -140,6 +140,8 @@ If all of these words are foreign to you, that is ok. Thankfully, Francis Polign
 
 ### Installation and Example Run
 
+Once you have the necessary keys discussed above, you're ready to cooking!  
+
 1. Create conda environment for garmin_analyis project ([install conda Here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html))
 
 2. Download the latest wheel (whl) from from the dist folder [here] (/dist/garmin_analysis-0.1-py3-none-any.whl)
