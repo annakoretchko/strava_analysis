@@ -127,15 +127,16 @@ Python is the only technical requirement for this project (however, environment 
   sudo apt-get install python3.6
   ```
 
-Additionally, there are **two** sources of data I employ for this project. 
+Additionally, there are **two** sources of data I employ for this project: 
 
 1. One I call call *historic* data, and is all my Strava data from the moment I request. This is gathering the data in bulk, since the Strava API limits you to your 200 most recent posts (which doesn't cover much if you've been using it for 7 years).  
 * If you have a Strava account, to get your *historic* data, go [here](https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-Bulk-Export)
 
 2. The other I call *new* data, and it is employs Strava API to get your most recent activities. The way this program runs, it uses your *historic* data, runs and API request to get your *new* data, and combines the two. To use the Strava API, you will need the following:
-  1. Client Key
-  2. Client Secret
-  3. Refresh Token
+* Client Key
+* Client Secret
+* Refresh Token  
+
 If all of these words are foreign to you, that is ok. Thankfully, Francis Polignano was kind enough to provide a [video](https://www.youtube.com/watch?v=sgscChKfGyg) going through this process. My code follows the steps he took, so you can successfully combine your newest and oldest data to one fantastic source of running data!
 
 ### Installation and Example Run
