@@ -27,21 +27,23 @@
 <br />
 
 <p align="center">
-  <a href="https://anna-koretchko.ue.r.appspot.com/garmi">
+  <a href="https://anna-koretchko.ue.r.appspot.com">
     <img src="images4ReadME/avg_speed_vs_distance.png" alt="Logo" width="800" height="500">
   </a>
 
-  <h3 align="center">Garmin Running Analysis</h3>
+  <h3 align="center">Strava Running Analysis</h3>
 
   <p align="center">
-    Quick package created to analyze data from Garmin Connect
+    Created this package as a way to implement the Strava API to automatically get my running data. Additionally, performed some Machine Learning Models are my data!
     <br />
-    <a href="https://connect.garmin.com/"><strong>Garmin Connect »</strong></a>
+    <a href="https://connect.garmin.com/"><strong>Strava »</strong></a>
     <br />
     <br />
     <a href="/dist/garmin_analysis-0.1-py3-none-any.whl">Latest Package</a>
     ·
-    <a href="https://anna-koretchko.ue.r.appspot.com/garmin">Demo</a>
+    <a href="https://anna-koretchko.ue.r.appspot.com">Demo</a>
+    .
+    <a href="https://developers.strava.com/">Strava API Documentation</a>
 
   </p>
 </p>
