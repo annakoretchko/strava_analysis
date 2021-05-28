@@ -87,6 +87,7 @@ def combine_new_and_old_data(path_new,path_historic):
     df_strava_historic = pd.read_csv(path_historic)
     df_strava_historic = df_strava_historic.rename(columns = {"Activity ID" :"activity_id"})
     df_strava_historic = df_strava_historic.rename(columns = {"Activity Type" :"type"})
+    df_strava_historic = df_strava_historic.rename(columns = {"Elevation Gain" :"total_elevation_gain"})
 
 
     ### clean new api data ###
@@ -105,6 +106,7 @@ def combine_new_and_old_data(path_new,path_historic):
     df_strava_api['start_date_local'] = df_strava_api['start_date_local'].dt.date
     # create new column to join with (this is the 'real' date)
     df_strava_api['activity_date'] = df_strava_api['start_date_local']
+    df_strava_api['total_elevation_gain'] = df_strava_api['total_elevation_gain'].round(decimals = 1)
 
     # renaming historic data columns
     df_strava_historic = df_strava_historic.rename(columns=str.lower)
@@ -122,6 +124,8 @@ def combine_new_and_old_data(path_new,path_historic):
     df_strava_historic['average_watts'] = df_strava_historic['average_watts'].round(decimals = 1)
     df_strava_historic['activity_date'] = pd.to_datetime(df_strava_historic['activity_date'])
     df_strava_historic['activity_date'] = df_strava_historic['activity_date'].dt.date
+    df_strava_historic['total_elevation_gain'] = df_strava_historic['total_elevation_gain'].round(decimals = 1)
+
 
     # concats the two dfs
     df_combo = pd.concat([df_strava_api,df_strava_historic])
