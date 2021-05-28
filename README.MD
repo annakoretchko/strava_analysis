@@ -83,6 +83,7 @@
 I have been using Strava since 2014, and for those of you unfamiliar with what Strava is, it's essentially 
 a social media for runners, bikers and swimmers alike. A platform where equally obsessed athletes can gather and
 ogle over their exercise data.  
+ 
 <br />
 I have been collecting running, swimming, lifting, and social media data surrounding my exercise efforts for the past  7 years, so I figured it was time to start doing some analytics ont he data. And sharing my methods and approach with you!  
 <br />
