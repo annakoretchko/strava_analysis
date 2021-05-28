@@ -23,10 +23,14 @@ def run():
 
     # compares two time frames data
     analyze_data_utils.compare_time_frames(os.environ['combined_activities'],
-                                           start_1 = '2020-06-27',
-                                           end_1 = '2020-10-27', 
-                                           start_2 = '2020-10-28', 
-                                           end_2 = '2021-02-26')
+                                           start_1 = '2019-07-01',
+                                           end_1 = '2020-04-01', 
+                                           start_2 = '2020-10-03', 
+                                           end_2 = '2021-04-26')
+
+    # investigating kudo 
+    analyze_data_utils.kudo_analysis(os.environ['new_activities_clean'])
+
 
 
 

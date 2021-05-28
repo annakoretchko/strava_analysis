@@ -27,9 +27,14 @@ def run():
 
     
     
+    # # adds new api activities data to historic already obtained data
+    # get_data_utils.combine_new_and_old_data(os.environ['new_activities'],
+    #                                         os.environ['historic_activities'])
+
+
     # adds new api activities data to historic already obtained data
-    get_data_utils.combine_new_and_old_data(os.environ['new_activities'],
-                                            os.environ['historic_activities'])
+    get_data_utils.combine_new_and_old_data2(os.environ['new_activities_raw'],
+                                            os.environ['historic_activities_raw'])
 
 
     print('Start get_data completed', date.now())

@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime as date
 import os
 import sys
+from sklearn import linear_model
 
 import strava_analysis.utils.general_utils as general_utils
 
@@ -21,16 +22,13 @@ def speed_vs_distance(file_path):
     #Create new dataframe with only columns I care about
     cols = ['name', 'activity_id', 'type', 'distance', 'moving_time',   
             'average_speed', 'max_speed','total_elevation_gain',
-            'start_date_local'
+            'activity_date'
         ]
     df = df[cols]
 
 
-
-    #Break date into start time and date
-    df['start_date_local'] = pd.to_datetime(df['start_date_local'])
-    df['start_time'] = df['start_date_local'].dt.time
-    df['start_date_local'] = df['start_date_local'].dt.date
+    # change avg speed
+    #df.loc[df["average_speed"] == 0,'average_speed'] = (df["distance"]  / df["moving_time"])*1000
 
     # select only runs (although tbh, it's already nearly just that)
     runs = df.loc[df['type'] == 'Run']
@@ -53,27 +51,22 @@ def max_speed_over_time(file_path):
     # reads in activities df
     df = pd.read_csv(file_path)
 
-    print(df['start_date_local'].head())
-    print(df['start_date_local'].tail())
-    sys.exit()
+
     #Create new dataframe with only columns I care about
     cols = ['name', 'upload_id', 'type', 'distance', 'moving_time',   
             'average_speed', 'max_speed','total_elevation_gain',
-            'start_date_local'
+            'activity_date'
         ]
     df = df[cols]
 
-
-    #Break date into start time and date
-    df['start_date_local'] = pd.to_datetime(df['start_date_local'])
-    df['start_time'] = df['start_date_local'].dt.time
-    df['start_date_local'] = df['start_date_local'].dt.date
-
+    # change avg speed
+    #df.loc[df["average_speed"] == 0,'average_speed'] = (df["distance"]  / df["moving_time"])*1000
+ 
     # select only runs (although tbh, it's already nearly just that)
     runs = df.loc[df['type'] == 'Run']
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    x = np.asarray(runs.start_date_local)
+    x = np.asarray(runs.activity_date)
     y = np.asarray(runs.max_speed)
     ax.plot_date(x, y)
     ax.set_title('Max Speed over Time')
@@ -95,22 +88,21 @@ def avg_speed_over_time(file_path):
     #Create new dataframe with only columns I care about
     cols = ['name', 'upload_id', 'type', 'distance', 'moving_time',   
             'average_speed', 'max_speed','total_elevation_gain',
-            'start_date_local'
+            'activity_date'
         ]
     df = df[cols]
 
 
-    #Break date into start time and date
-    df['start_date_local'] = pd.to_datetime(df['start_date_local'])
-    df['start_time'] = df['start_date_local'].dt.time
-    df['start_date_local'] = df['start_date_local'].dt.date
+
+    # change avg speed
+    #df.loc[df["average_speed"] == 0,'average_speed'] = (df["distance"]  / df["moving_time"])*1000
 
     # select only runs (although tbh, it's already nearly just that)
     runs = df.loc[df['type'] == 'Run']
 
     fig = plt.figure()
     ax1 = fig.add_subplot(111)
-    x = np.asarray(runs.start_date_local)
+    x = np.asarray(runs.activity_date)
     y = np.asarray(runs.average_speed)
     ax1.plot_date(x, y)
     ax1.set_title('Average Speed over Time')
@@ -140,36 +132,34 @@ def compare_time_frames(file_path,start_1, end_1, start_2, end_2):
     #Create new dataframe with only columns I care about
     cols = ['name', 'upload_id', 'type', 'distance', 'moving_time',   
             'average_speed', 'max_speed','total_elevation_gain',
-            'start_date_local'
+            'activity_date'
         ]
     df = df[cols]
 
 
-    #Break date into start time and date
-    df['start_date_local'] = pd.to_datetime(df['start_date_local'])
-    df['start_time'] = df['start_date_local'].dt.time
-    df['start_date_local'] = df['start_date_local'].dt.date
-    
+    # change avg speed
+    #df.loc[df["average_speed"] == 0,'average_speed'] = (df["distance"]  / df["moving_time"])*1000
     run = df.loc[df['type'] == 'Run'] 
-    #add home / dc classification 2020-06-27 is date switch
+ 
     # convert time strings
-    #dc_date = date.strptime(dc_date, '%Y-%m-%d').date()
     start_1 = date.strptime(start_1, '%Y-%m-%d').date()
     end_1 = date.strptime(end_1, '%Y-%m-%d').date()
     start_2 = date.strptime(start_2, '%Y-%m-%d').date()
     end_2 = date.strptime(end_2, '%Y-%m-%d').date()
 
-    run['start_date_local'] = pd.to_datetime(run['start_date_local']).dt.date
+    run['activity_date'] = pd.to_datetime(run['activity_date']).dt.date
 
     # chunk time frames
 
     # create column that is T if in t1 and F all else
-    run['time_frame_1'] = np.where( (run['start_date_local'] > start_1) & (run['start_date_local'] < end_1), 'T', 'F')
+    run['time_frame_1'] = np.where( (run['activity_date'] > start_1) & (run['activity_date'] < end_1), 'T', 'F')
     # get rows that fall in t1 column 
     time_frame_1 = run.loc[run['time_frame_1'] == 'T']
+
+
     
     # create column that is F if in t2 and F all else
-    run['time_frame_2'] = np.where( (run['start_date_local'] > start_2) & (run['start_date_local'] < end_2), 'T', 'F')
+    run['time_frame_2'] = np.where( (run['activity_date'] > start_2) & (run['activity_date'] < end_2), 'T', 'F')
     # get rows that fall in t2 column
     time_frame_2 = run.loc[run['time_frame_2'] == 'T']
 
@@ -179,6 +169,7 @@ def compare_time_frames(file_path,start_1, end_1, start_2, end_2):
     t2_speed = round(time_frame_2['average_speed'].mean() * 2.237, 2)
     t1_max_speed = round(time_frame_1['max_speed'].mean()* 2.237, 2)
     t2_max_speed = round(time_frame_2['max_speed'].mean()* 2.237, 2)
+
     print("Average T1 Speed: " + str(t1_speed) + " | Average T1 Max Speed: " + str(t1_max_speed) + '\n'
         + "Average T2 Speed: " + str(t2_speed) + " | Average T2 Max Speed: " + str(t2_max_speed))
 
@@ -188,6 +179,56 @@ def compare_time_frames(file_path,start_1, end_1, start_2, end_2):
     percent_increase_average_max = round((t2_max_speed - t1_max_speed) * 100 / t1_max_speed,2)
     print("Percent increase max speed:",percent_increase_average_max)
 
-    sns.scatterplot(x='total_elevation_gain', y = 'average_speed', data = run).set_title("Speed vs Elevation Gain")
+    #sns.scatterplot(x='total_elevation_gain', y = 'average_speed', data = run).set_title("Speed vs Elevation Gain")
+    sns.regplot(x='total_elevation_gain', y = 'average_speed', data = run).set_title("Speed vs Elevation Gain")
     # saves image
     general_utils.save_image(plt,"speed_vs_elevation_gain")
+
+
+
+
+def kudo_analysis(file_path):
+
+    """[Investigating if the number of kudos plays a role in the results of my runs]
+    """
+
+    # reads in activities df
+    df = pd.read_csv(file_path)
+
+
+    #Create new dataframe with only columns I care about
+    cols = ['kudos_count', 'total_photo_count', 'type', 'distance', 'moving_time',   
+            'average_speed', 'max_speed','total_elevation_gain',
+            'activity_id','comment_count','average_heartrate','average_temp'
+        ]
+    df = df[cols]
+
+    features = ['total_photo_count', 'distance','average_speed']
+    target = 'kudos_count'
+   
+    # regr = linear_model.LinearRegression()
+    # regr.fit(X, y)
+
+    # predict_kudos = regr.predict([[3, 4400,3.52]])
+
+    # print(predict_kudos)
+    ################################################ Train #############################################
+    X = df[features].values.reshape(-1, len(features))
+    y = df[target].values
+
+    ols = linear_model.LinearRegression()
+    model = ols.fit(X, y)
+    print(model.coef_)
+    print(model.intercept_)
+    print(model.score(X, y))
+
+    x_pred = np.array([3, 4400,3.52])
+    x_pred = x_pred.reshape(-1, len(features))
+
+    print(model.predict(x_pred))
+
+
+
+
+
+
