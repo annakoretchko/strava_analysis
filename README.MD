@@ -27,7 +27,7 @@
 <br />
 
 <p align="center">
-  <a href="https://anna-koretchko.ue.r.appspot.com">
+  <a href="https://anna-koretchko.ue.r.appspot.com/strava">
     <img src="images4ReadME/avg_speed_vs_distance.png" alt="Logo" width="800" height="500">
   </a>
 
@@ -41,7 +41,7 @@
     <br />
     <a href="https://github.com/annakoretchko/strava_analysis/tree/master/dist/lastest_build">Latest Package</a>
     ·
-    <a href="https://anna-koretchko.ue.r.appspot.com">Demo</a>
+    <a href="https://anna-koretchko.ue.r.appspot.com/strava">Demo</a>
     ·
     <a href="https://developers.strava.com/">Strava API Documentation</a>
     ·
@@ -171,7 +171,7 @@ Please refer to [jupyter_visuals](https://github.com/annakoretchko/strava_analys
 
 This packages allows Strava users to analyze their data in a pythonic manner, which can be extrapolated further into a myriad of projects! It employs Strava's API to access your data and this allows you to run is systematically as you keep on running and gathering more data!  
 
-_To see a live demo of the graphs/outputs, please refer to the [Demo](https://anna-koretchko.ue.r.appspot.com)_
+_To see a live demo of the graphs/outputs, please refer to the [Demo](https://anna-koretchko.ue.r.appspot.com/strava)_
 
 
 
