@@ -6,8 +6,12 @@ from datetime import datetime as date
 import os
 import sys
 
-import strava_analysis.utils.analyze_data_utils as analyze_data_utils
-import strava_analysis.utils.general_utils as general_utils
+
+import utils.analyze_data_utils as analyze_data_utils
+import utils.general_utils as general_utils
+
+# import strava_analysis.utils.analyze_data_utils as analyze_data_utils
+# import strava_analysis.utils.general_utils as general_utils
 
 
 def run():

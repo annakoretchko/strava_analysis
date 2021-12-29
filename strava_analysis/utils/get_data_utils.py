@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from datetime import datetime
 
-
-import strava_analysis.utils.general_utils as general_utils
+import utils.general_utils as general_utils
+# import strava_analysis.utils.general_utils as general_utils
 
 
 def get_updated_access_token(refresh_token,client_id,client_secret):

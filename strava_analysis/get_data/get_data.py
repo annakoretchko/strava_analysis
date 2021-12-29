@@ -9,7 +9,8 @@ from datetime import datetime as date
 import os
 
 from matplotlib.dates import *
-import strava_analysis.utils.get_data_utils as get_data_utils
+import utils.get_data_utils as get_data_utils
+#import strava_analysis.utils.get_data_utils as get_data_utils
 import secrets
 
 def run():
@@ -23,6 +24,8 @@ def run():
 
     # get activities and saves as csv in data folder
     df = get_data_utils.get_activities(updated_access_token)
+    print(df)
+    sys.exit()
 
 
     

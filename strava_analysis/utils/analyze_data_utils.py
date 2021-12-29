@@ -7,7 +7,9 @@ import os
 import sys
 from sklearn import linear_model
 
-import strava_analysis.utils.general_utils as general_utils
+
+import utils.general_utils as general_utils
+#import strava_analysis.utils.general_utils as general_utils
 
 
 def speed_vs_distance(file_path):
